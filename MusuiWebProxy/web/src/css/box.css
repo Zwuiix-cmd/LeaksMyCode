@@ -1,0 +1,361 @@
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.box {
+    border-radius: 0.5em;
+    border: 2px solid #1e1e1e;
+    background: #1e1e1e;
+    color: white;
+    opacity: 0.7;
+    width: 250px;
+    height: 350px;
+    flex: auto;
+    padding: 1em;
+    margin: 15px;
+    transition: all .2s;
+    overflow: hidden;
+    font-family: system-ui, sans-serif;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.box p {
+    text-align: center;
+    margin: 15pt;
+    font-weight: bolder;
+    font-size: 30px;
+    padding: 0;
+    border: 0;
+    font-family: system-ui, sans-serif;
+    vertical-align: baseline;
+}
+
+.box label {
+    margin-top: 15pt;
+    font-weight: bolder;
+    font-size: 20px;
+    display: block;
+    margin-left: 5px;
+    position: relative;
+    top: 2px;
+}
+
+.box form {
+    margin: 10pt;
+    font-weight: bolder;
+    font-size: 20px;
+}
+
+.box input {
+    margin: 10pt;
+    font-weight: bolder;
+    font-size: 20px;
+    display: inline-block;
+    position: relative;
+}
+
+.box:hover {
+    border-width: 2px;
+    border-color: #f9e86a;
+    --dur: .15s;
+    --delay: .15s;
+    --radius: 16px;
+    transition: border-top-left-radius var(--dur) var(--delay) ease-out,
+    border-top-right-radius var(--dur) calc(var(--delay) * 2) ease-out,
+    border-bottom-right-radius var(--dur) calc(var(--delay) * 3) ease-out,
+    border-bottom-left-radius var(--dur) calc(var(--delay) * 4) ease-out,
+    box-shadow calc(var(--dur) * 4) ease-out,
+    transform calc(var(--dur) * 4) ease-out,
+    background calc(var(--dur) * 4) steps(4, jump-end);
+}
+
+.box-content {
+    max-height: calc(100% - 60px);
+    overflow: hidden;
+}
+
+.box-content.scrollable {
+    overflow-y: auto;
+}
+
+.slider {
+    width: 50%;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    height: .5em;
+    border-radius: .5em;
+    outline: 0;
+    background-color: #2b2b2b;
+    cursor: pointer;
+    transition: all .5s ease
+}
+
+.slider:hover {
+    background-color: #444
+}
+
+.slider:active::-webkit-slider-thumb {
+    transform: scale(1.2);
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    cursor: pointer;
+    width: 1em;
+    height: 1em;
+    background: #f9e86a;
+    border-radius: 1em
+}
+
+.slider::-moz-range-thumb {
+    cursor: pointer;
+    width: 1.5em;
+    height: 1.5em;
+    background: #f9e86a;
+    border-radius: 1em
+}
+
+.checkbox {
+    text-align: left;
+    white-space: nowrap;
+    cursor: pointer
+}
+
+.checkbox,.checkbox__box {
+    display: flex;
+    align-items: center
+}
+
+.checkbox__box {
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    margin-right: .5em;
+    background: #2b2b2b;
+    border-radius: 12px;
+    border: 2px solid #2b2b2b;
+    transition: all .5s ease
+}
+
+.checkbox__box:hover {
+    border-color: #f9e86a;
+}
+
+.checkbox--checked .checkbox__box {
+    background: #f9e86a;
+    border-color: #f9e86a;
+}
+
+.checkbox__box__icon {
+    color: #fff
+}
+
+.checkbox__text {
+    flex: auto;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+
+.box-content.scrollable {
+    max-height: calc(100% - 60px);
+    overflow-y: auto;
+    padding-right: 10px;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+    background-color: #1e1e1e;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #f9e86a;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #f9e86a;
+}
+
+.scrollable {
+    scrollbar-width: thin;
+    scrollbar-color: #f9e86a #1e1e1e;
+}
+
+.input-container {
+    display: block;
+    position: relative;
+    margin-bottom: 1px;
+    height: 50px;
+    bottom: 18px;
+}
+
+.center-input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.input-label {
+    color: #555;
+    display: block;
+    margin-bottom: 0.5em
+}
+
+.input-error {
+    position: absolute;
+    top: -1.5em;
+    right: 0;
+    background: #ef5858;
+    display: block;
+    padding: 1em;
+    color: #333;
+    border-bottom-left-radius: 0.25em;
+    border-bottom-right-radius: 0.25em;
+    z-index: 2;
+}
+
+.input:focus {
+    outline: none;
+    border-color: #f9e86a;
+}
+
+.input:focus + .input-label,
+.input:valid + .input-label {
+    color: #f9e86a;
+}
+
+.input:invalid {
+    border-color: #f13a3a !important;
+}
+
+.input:invalid + .input-label {
+    color: #f13a3a;
+}
+
+.input {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    background: #2b2b2b;
+    border: 2px solid #252525;
+    border-radius: 0.3em;
+    transition: border-color 0.15s;
+    color: #fff;
+    font-size: 0.8em;
+    width: 120px;
+    padding: 0.3em;
+    outline: none;
+}
+
+.input-wrapper__icon {
+    color: #bbb;
+    margin: 0 0.3em;
+    width: 15px;
+    height: 15px;
+}
+
+.input-wrapper__value {
+    flex: auto;
+    border: none;
+    background: transparent;
+    padding: 0.3em 0.3em 0.3em 0;
+    outline: none;
+    color: #fff;
+    font-size: 0.8em;
+}
+
+@media (max-width: 500px) {
+    .input-wrapper__icon {
+        display:none;
+    }
+
+    .input-wrapper__value {
+        padding: 0.3em;
+    }
+
+    .input {
+        width: 100%;
+    }
+
+    .center-input {
+        align-items: flex-start;
+    }
+}
+
+/* Styles de base pour le bouton */
+.button {
+    display: inline-block;
+    color: #fff;
+    background-color: #2b2b2b;
+    padding: 1rem;
+    border-radius: 2rem;
+    font-weight: 700;
+    font-size: 1.1rem;
+    letter-spacing: .1rem;
+    text-transform: uppercase;
+    white-space: nowrap;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color .1s, opacity .2s, transform .1s;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.button__icon {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: .25rem;
+    margin-left: .1rem;
+}
+
+.button--primary {
+    background-color: #314492;
+}
+
+.button--warning {
+    background-color: #f13a3a;
+}
+
+.button--icon {
+    padding: 1em 1.5em;
+}
+
+.button--lr {
+    border-radius: 1rem;
+}
+
+.button:disabled,
+.button[disabled=true] {
+    opacity: .5;
+    cursor: not-allowed;
+}
+
+/* Styles pour les boutons avec le texte réduit sur les petits écrans */
+@media (max-width: 500px) {
+    .button {
+        font-size: .8rem;
+    }
+}
+
+/* Supprime la bordure pour les boutons de type bouton */
+button.button {
+    border: none;
+}
+
+/* Supprime la décoration pour les boutons de type lien */
+a.button {
+    text-decoration: none;
+}

@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Musu - WebClient</title>
+    <meta content="" name="keywords">
+    <meta content="AAAAA" name="description">
+
+    <link href="src/img/favicon.ico" rel="icon">
+
+    <link rel="stylesheet" href="src/css/style.css">
+    <link rel="stylesheet" href="src/css/code.css">
+    <link rel="stylesheet" href="src/css/box.css">
+    <link rel="stylesheet" href="src/css/toggle.css">
+    <link rel="stylesheet" href="src/css/footer.css">
+    <link rel="stylesheet" href="src/css/boostrap/footer.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="logo-container">
+            <img class="logo" src="src/img/logo.png" alt="Logo">
+        </div>
+    </div>
+    <div>
+        <form action="/dashboard_transfer" method="post">
+            <div class="buttons">
+                <button type="submit" class="button-transfer">Transfer</button>
+            </div>
+        </form>
+        <form action="/synchronize" method="POST" id="mainForm">
+            <div class="buttons">
+                <button type="submit" class="button-sync">Synchronise</button>
+                <button type="submit" class="button-disable-all" name="disable_all">Disable All</button>
+                <button type="submit" class="button-self-destruct" name="self_destruct">Self Destruct</button>
+            </div>
+
+            <div class="container">
+                <div class="box">
+                    <p>AirJump</p>
+                    <label class="toggle">
+                        <span class="toggle-label">Enabled</span>
+                        <input class="toggle-checkbox" name="airjump_status" type="checkbox">
+                        <div class="toggle-switch"></div>
+                    </label>
+                </div>
+
+                <div class="box">
+                    <p>AntiImmobile</p>
+                    <label class="toggle">
+                        <span class="toggle-label">Enabled</span>
+                        <input class="toggle-checkbox" name="antiimmobile_status" type="checkbox">
+                        <div class="toggle-switch"></div>
+                    </label>
+                </div>
+
+                <div class="box">
+                    <p>AntiVoid</p>
+                    <label class="toggle">
+                        <span class="toggle-label">Enabled</span>
+                        <input class="toggle-checkbox" name="antivoid_status" type="checkbox">
+                        <div class="toggle-switch"></div>
+                    </label>
+                </div>
+
+                <div class="box">
+                    <p>AutoClicker</p>
+                    <div class="box-content scrollable">
+                        <label class="toggle">
+                            <span class="toggle-label">Enabled</span>
+                            <input class="toggle-checkbox" name="autoclicker_status" type="checkbox">
+                            <div class="toggle-switch"></div>
+                        </label>
+
+                        <label for="autoclicker_cps_value">Click per second</label>
+                        <input class="slider" type="range" name="autoclicker_cps_value" id="autoclicker_cps_value" min="1" max="30" step="1" value="10"/>
+                        <output name="autoclicker_cps_result">10 cps</output>
+
+                        <label class="toggle">
+                            <span class="toggle-label">Randomize</span>
+                            <input class="toggle-checkbox" name="autoclicker_randomize" type="checkbox">
+                            <div class="toggle-switch"></div>
+                        </label>
+
+                        <label class="toggle">
+                            <span class="toggle-label">Sprinting Only</span>
+                            <input class="toggle-checkbox" name="autoclicker_sprinting" type="checkbox">
+                            <div class="toggle-switch"></div>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <p>AutoSneak</p>
+                    <label class="toggle">
+                        <span class="toggle-label">Enabled</span>
+                        <input class="toggle-checkbox" name="autosneak_status" type="checkbox">
+                        <div class="toggle-switch"></div>
+                    </label>
+                </div>
+
+                <div class="box">
+                    <p>AutoSprint</p>
+                    <label class="toggle">
+                        <span class="toggle-label">Enabled</span>
+                        <input class="toggle-checkbox" name="autosprint_status" type="checkbox">
+                        <div class="toggle-switch"></div>
+                    </label>
+                </div>
+
+                <div class="box">
+                    <p>Bhop</p>
+                    <div class="box-content scrollable">
+                        <label class="toggle">
+                            <span class="toggle-label">Enabled</span>
+                            <input class="toggle-checkbox" name="bhop_status" type="checkbox">
+                            <div class="toggle-switch"></div>
+                        </label>
+
+                        <label for="bhop_speed_value">Speed</label>
+                        <input class="slider" type="range" name="bhop_speed_value" id="bhop_speed_value" min="0.10" max="3" step="0.01" value="0.10"/>
+                        <output name="bhop_speed">0.10</output>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <p>BigBitch</p>
+                    <div class="box-content scrollable">
+                        <label class="toggle">
+                            <span class="toggle-label">Enabled</span>
+                            <input class="toggle-checkbox" name="bigbitch_status" type="checkbox">
+                            <div class="toggle-switch"></div>
+                        </label>
+
+                        <label>
+                            <span class="toggle-label">Target</span>
+                            <input type="text" name="bigbitch_target" placeholder="Steve" class="input">
+                        </label>
+
+                        <label class="toggle">
+                            <span class="toggle-label">Focus</span>
+                            <input class="toggle-checkbox" name="bigbitch_focus" type="checkbox">
+                            <div class="toggle-switch"></div>
+                        </label>
+
+                        <label class="toggle">
+                            <span class="toggle-label">Behind his head</span>
+                            <input class="toggle-checkbox" name="bigbitch_behindhishead" type="checkbox">
+                            <div class="toggle-switch"></div>
+                        </label>
+
+                        <label class="toggle">
+                            <span class="toggle-label">Client derp</span>
+                            <input class="toggle-checkbox" name="bigbitch_client_derp" type="checkbox">
+                            <div class="toggle-switch"></div>
+                        </label>
+
+                        <label class="toggle">
+                            <span class="toggle-label">Third person</span>
+                            <input class="toggle-checkbox" name="bigbitch_third_person" type="checkbox">
+                            <div class="toggle-switch"></div>
+                        </label>
+
+                        <label class="toggle">
+                            <span class="toggle-label">Server crash on death</span>
+                            <input class="toggle-checkbox" name="bigbitch_crash_death" type="checkbox">
+                            <div class="toggle-switch"></div>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <p>ClickTP</p>
+                    <label class="toggle">
+                        <span class="toggle-label">Enabled</span>
+                        <input class="toggle-checkbox" name="clicktp_status" type="checkbox">
+                        <div class="toggle-switch"></div>
+                    </label>
+                </div>
+
+                <div class="box">
+                    <p>DeathPosition</p>
+                    <label class="toggle">
+                        <span class="toggle-label">Enabled</span>
+                        <input class="toggle-checkbox" name="deathposition_status" type="checkbox">
+                        <div class="toggle-switch"></div>
+                    </label>
+                </div>
+
+                <div class="box">
+                    <p>Derp</p>
+                    <label class="toggle">
+                        <span class="toggle-label">Enabled</span>
+                        <input class="toggle-checkbox" name="derp_status" type="checkbox">
+                        <div class="toggle-switch"></div>
+                    </label>
+                </div>
+
+                <div class="box">
+                    <p>Disabler</p>
+                    <label class="toggle">
+                        <span class="toggle-label">Enabled</span>
+                        <input class="toggle-checkbox" name="disabler_status" type="checkbox">
+                        <div class="toggle-switch"></div>
+                    </label>
+                </div>
+
+                <div class="box">
+                    <p>ESP</p>
+                    <label class="toggle">
+                        <span class="toggle-label">Enabled</span>
+                        <input class="toggle-checkbox" name="esp_status" type="checkbox">
+                        <div class="toggle-switch"></div>
+                    </label>
+                </div>
+
+                <div class="box">
+                    <p>FastEat</p>
+                    <label class="toggle">
+                        <span class="toggle-label">Enabled</span>
+                        <input class="toggle-checkbox" name="fasteat_status" type="checkbox">
+                        <div class="toggle-switch"></div>
+                    </label>
+                </div>
+
+                <div class="box">
+                    <p>Fly</p>
+                    <div class="box-content scrollable">
+                        <label class="toggle">
+                            <span class="toggle-label">Enabled</span>
+                            <input class="toggle-checkbox" name="fly_status" type="checkbox">
+                            <div class="toggle-switch"></div>
+                        </label>
+
+                        <label for="fly_speed_value">Speed</label>
+                        <input class="slider" type="range" name="fly_speed_value" id="fly_speed_value" min="1" max="8" step="0.01" value="1"/>
+                        <output name="fly_speed">1</output>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <p>Franky</p>
+                    <label class="toggle">
+                        <span class="toggle-label">Enabled</span>
+                        <input class="toggle-checkbox" name="franky_status" type="checkbox">
+                        <div class="toggle-switch"></div>
+                    </label>
+                </div>
+
+
+
+                <div class="box">
+                    <p>Reach</p>
+                    <div class="box-content scrollable">
+                        <label class="toggle">
+                            <span class="toggle-label">Enabled</span>
+                            <input class="toggle-checkbox" name="reach_status" type="checkbox">
+                            <div class="toggle-switch"></div>
+                        </label>
+
+                        <label for="reach_value">Range</label>
+                        <input class="slider" type="range" name="reach_value" id="reach_value" min="3" max="8" step="0.01" value="3"/>
+                        <output name="reach_result">3 blocks</output>
+
+                        <label class="toggle">
+                            <span class="toggle-label">Sprinting Only</span>
+                            <input class="toggle-checkbox" name="reach_sprinting" type="checkbox">
+                            <div class="toggle-switch"></div>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <p>Velocity</p>
+                    <div class="box-content scrollable">
+                        <label class="toggle">
+                            <span class="toggle-label">Enabled</span>
+                            <input class="toggle-checkbox" name="velocity_status" type="checkbox">
+                            <div class="toggle-switch"></div>
+                        </label>
+                        <label for="kbhorizontal">Horizontal</label>
+                        <input class="slider" type="range" name="kbhorizontal" id="kbhorizontal" min="0" max="100" step="0.1" value="98" required/>
+                        <output name="horizontalResult">98%</output>
+
+                        <label for="kbvertical">Vertical</label>
+                        <input class="slider" type="range" name="kbvertical" id="kbvertical" min="0" max="100" step="0.1" value="98" required/>
+                        <output name="verticalResult">98%</output>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <p>Timer</p>
+                    <div class="box-content scrollable">
+                        <label class="toggle">
+                            <span class="toggle-label">Enabled</span>
+                            <input class="toggle-checkbox" name="timer_status" type="checkbox">
+                            <div class="toggle-switch"></div>
+                        </label>
+                        <label for="timer">Value</label>
+                        <input class="slider" type="range" name="timer" id="timer" min="1" max="2" step="0.01" value="1"/>
+                        <output name="timerResult">1</output>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <p>HitBox</p>
+                    <div class="box-content scrollable">
+                        <label class="toggle">
+                            <span class="toggle-label">Enabled</span>
+                            <input class="toggle-checkbox" name="hitbox_status" type="checkbox">
+                            <div class="toggle-switch"></div>
+                        </label>
+                        <label for="hitboxwidth">Width</label>
+                        <input class="slider" type="range" name="hitboxwidth" id="hitboxwidth" min="0.6" max="5" step="0.1" value="0.6" required/>
+                        <output name="widthResult">0.6</output>
+
+                        <label for="hitboxheight">Height</label>
+                        <input class="slider" type="range" name="hitboxheight" id="hitboxheight" min="1.8" max="5" step="0.1" value="1.8" required/>
+                        <output name="heightResult">1.8</output>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <p>KillAura</p>
+
+                    <div class="box-content scrollable">
+                        <label class="toggle">
+                            <span class="toggle-label">Enabled</span>
+                            <input class="toggle-checkbox" name="killaura_status" type="checkbox">
+                            <div class="toggle-switch"></div>
+                        </label>
+                        <label for="killaura_reach_value">Range</label>
+                        <input class="slider" type="range" name="killaura_reach_value" id="killaura_reach_value" min="3" max="8" step="0.01" value="3"/>
+                        <output name="killaura_reach">3 blocks</output>
+
+                        <label for="killaura_clicker_value">Click per second</label>
+                        <input class="slider" type="range" name="killaura_clicker_value" id="killaura_clicker_value" min="1" max="20" step="1" value="10"/>
+                        <output name="killaura_clicker">10 cps</output>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <p>HighJump</p>
+                    <div class="box-content scrollable">
+                        <label class="toggle">
+                            <span class="toggle-label">Enabled</span>
+                            <input class="toggle-checkbox" name="highjump_status" type="checkbox">
+                            <div class="toggle-switch"></div>
+                        </label>
+
+                        <label for="highjump_jumpheight_value">Jump Height</label>
+                        <input class="slider" type="range" name="highjump_jumpheight_value" id="highjump_jumpheight_value" min="0.50" max="5" step="0.01" value="1"/>
+                        <output name="highjump_jumpheight">1</output>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <p>Motion</p>
+                    <div class="box-content scrollable">
+                        <label class="toggle">
+                            <span class="toggle-label">Enabled</span>
+                            <input class="toggle-checkbox" name="motion_status" type="checkbox">
+                            <div class="toggle-switch"></div>
+                        </label>
+
+                        <label for="motion_speed_value">Speed</label>
+                        <input class="slider" type="range" name="motion_speed_value" id="motion_speed_value" min="1" max="8" step="0.01" value="1"/>
+                        <output name="motion_speed">1</output>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <p>Jetpack</p>
+                    <div class="box-content scrollable">
+                        <label class="toggle">
+                            <span class="toggle-label">Enabled</span>
+                            <input class="toggle-checkbox" name="jetpack_status" type="checkbox">
+                            <div class="toggle-switch"></div>
+                        </label>
+
+                        <label for="jetpack_speed_value">Speed</label>
+                        <input class="slider" type="range" name="jetpack_speed_value" id="jetpack_speed_value" min="1" max="8" step="0.01" value="1"/>
+                        <output name="jetpack_speed">1</output>
+                    </div>
+                </div>
+
+
+
+                <div class="box">
+                    <p>Glide</p>
+                    <div class="box-content scrollable">
+                        <label class="toggle">
+                            <span class="toggle-label">Enabled</span>
+                            <input class="toggle-checkbox" name="glide_status" type="checkbox">
+                            <div class="toggle-switch"></div>
+                        </label>
+
+                        <label for="glide_speed_value">Speed</label>
+                        <input class="slider" type="range" name="glide_speed_value" id="glide_speed_value" min="-2.0" max="2" step="0.01" value="-0.15"/>
+                        <output name="glide_speed">-0.15</output>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <p>NoClip</p>
+                    <label class="toggle">
+                        <span class="toggle-label">Enabled</span>
+                        <input class="toggle-checkbox" name="noclip_status" type="checkbox">
+                        <div class="toggle-switch"></div>
+                    </label>
+                </div>
+
+                <div class="box">
+                    <p>Speed</p>
+                    <div class="box-content scrollable">
+                        <label class="toggle">
+                            <span class="toggle-label">Enabled</span>
+                            <input class="toggle-checkbox" name="speed_status" type="checkbox">
+                            <div class="toggle-switch"></div>
+                        </label>
+
+                        <label for="speed_value">Value</label>
+                        <input class="slider" type="range" name="speed_value" id="speed_value" min="0.10" max="3" step="0.01" value="0.10"/>
+                        <output name="speed">0.10</output>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <p>NoFall</p>
+                    <label class="toggle">
+                        <span class="toggle-label">Enabled</span>
+                        <input class="toggle-checkbox" name="nofall_status" type="checkbox">
+                        <div class="toggle-switch"></div>
+                    </label>
+                </div>
+
+                <div class="box">
+                    <p>InstantBreak</p>
+                    <label class="toggle">
+                        <span class="toggle-label">Enabled</span>
+                        <input class="toggle-checkbox" name="instantbreak_status" type="checkbox">
+                        <div class="toggle-switch"></div>
+                    </label>
+                </div>
+
+                <div class="box">
+                    <p>TargetCircle</p>
+                    <label class="toggle">
+                        <span class="toggle-label">Enabled</span>
+                        <input class="toggle-checkbox" name="targetcircle_status" type="checkbox">
+                        <div class="toggle-switch"></div>
+                    </label>
+                </div>
+
+                <div class="box">
+                    <p>Spammer</p>
+                    <label class="toggle">
+                        <span class="toggle-label">Enabled</span>
+                        <input class="toggle-checkbox" name="spammer_status" type="checkbox">
+                        <div class="toggle-switch"></div>
+                    </label>
+
+                    <label>
+                        <input type="text" name="spammer_message" placeholder="Message" class="input">
+                    </label>
+                </div>
+                <div class="box">
+                    <p>Health Checker</p>
+                    <div class="box-content scrollable">
+                        <label class="toggle">
+                            <span class="toggle-label">Enabled</span>
+                            <input class="toggle-checkbox" name="healthchecker_status" type="checkbox">
+                            <div class="toggle-switch"></div>
+                        </label>
+
+                        <label for="healthchecker_percent">Percent</label>
+                        <input class="slider" type="range" name="healthchecker_percent" id="healthchecker_percent" min="2" max="100" step="1" value="100"/>
+                        <output name="healthchecker">10%</output>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <p>TimeChanger</p>
+                    <div class="box-content scrollable">
+                        <label class="toggle">
+                            <span class="toggle-label">Enabled</span>
+                            <input class="toggle-checkbox" name="timechanger_status" type="checkbox">
+                            <div class="toggle-switch"></div>
+                        </label>
+
+                        <label for="timechanger_value">Time</label>
+                        <input class="slider" type="range" name="timechanger_value" id="timechanger_value" min="0" max="24000" step="1" value="0"/>
+                        <output name="timechanger">0</output>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="footer-dark">
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6 col-md-3 item">
+                        <h3>About</h3>
+                        <ul>
+                            <li><a href="https://discord.gg/DhtRcRbCvQ">Discord</a></li>
+                            <li><a href="#">Team</a></li>
+                            <li><a href="#">Careers</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6 item text">
+                        <h3>Musui</h3>
+                    </div>
+                    <div class="col item social"><a href="#"><i class="icon ion-social-facebook"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-instagram"></i></a></div>
+                </div>
+                <p class="copyright">Musui © 2023</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="src/js/toggle.js"></script>
+    <script src="src/js/button.js"></script>
+    <script src="src/js/modules.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

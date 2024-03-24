@@ -1,0 +1,162 @@
+body {
+    margin-left: 0;
+    font-family: system-ui, sans-serif;
+    background-color: #111111;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.logo-container {
+    max-width: 400px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    position: relative;
+    max-width: 100%;
+    height: auto;
+    top: 18px;
+}
+
+.logo:hover {
+    transition: opacity 0.2s;
+    opacity: 0.8;
+}
+
+.buttons {
+    display: flex;
+    padding: 30px 30px 20px 15px;
+    justify-content: center;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.button:hover {
+    transition: opacity 0.5s;
+    opacity: 0.7;
+    margin-right: 10px;
+}
+
+.button-sync {
+    margin-right: 10px;
+    color: white;
+    border: 2px solid #1e1e1e;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 0.5em;
+    background: #1e1e1e;
+}
+
+.button-sync:hover {
+    border-width: 2px;
+    border-color: #f9e86a;
+    --dur: .15s;
+    --delay: .15s;
+    --radius: 16px;
+    transition: border-top-left-radius var(--dur) var(--delay) ease-out,
+    border-top-right-radius var(--dur) calc(var(--delay) * 2) ease-out,
+    border-bottom-right-radius var(--dur) calc(var(--delay) * 3) ease-out,
+    border-bottom-left-radius var(--dur) calc(var(--delay) * 4) ease-out,
+    box-shadow calc(var(--dur) * 4) ease-out,
+    transform calc(var(--dur) * 4) ease-out,
+    background calc(var(--dur) * 4) steps(4, jump-end);
+}
+
+.button-disable-all {
+    margin-right: 10px;
+    color: white;
+    border: 2px solid #1e1e1e;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 0.5em;
+    background: #1e1e1e;
+}
+
+.button-disable-all:hover {
+    border-width: 2px;
+    border-color: #ee4343;
+    --dur: .15s;
+    --delay: .15s;
+    --radius: 16px;
+    transition: border-top-left-radius var(--dur) var(--delay) ease-out,
+    border-top-right-radius var(--dur) calc(var(--delay) * 2) ease-out,
+    border-bottom-right-radius var(--dur) calc(var(--delay) * 3) ease-out,
+    border-bottom-left-radius var(--dur) calc(var(--delay) * 4) ease-out,
+    box-shadow calc(var(--dur) * 4) ease-out,
+    transform calc(var(--dur) * 4) ease-out,
+    background calc(var(--dur) * 4) steps(4, jump-end);
+}
+
+.button-self-destruct {
+    margin-right: 10px;
+    color: white;
+    border: 2px solid #1e1e1e;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 0.5em;
+    background: #1e1e1e;
+}
+
+.button-self-destruct:hover {
+    border-width: 2px;
+    border-color: #ee4343;
+    --dur: .15s;
+    --delay: .15s;
+    --radius: 16px;
+    transition: border-top-left-radius var(--dur) var(--delay) ease-out,
+    border-top-right-radius var(--dur) calc(var(--delay) * 2) ease-out,
+    border-bottom-right-radius var(--dur) calc(var(--delay) * 3) ease-out,
+    border-bottom-left-radius var(--dur) calc(var(--delay) * 4) ease-out,
+    box-shadow calc(var(--dur) * 4) ease-out,
+    transform calc(var(--dur) * 4) ease-out,
+    background calc(var(--dur) * 4) steps(4, jump-end);
+}
+
+.button-transfer {
+    color: white;
+    border: 2px solid #1e1e1e;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 0.5em;
+    background: #1e1e1e;
+    position: relative;
+    top: 10px
+}
+
+.button-transfer:hover {
+    border-width: 2px;
+    border-color: #f7adf6;
+    --dur: .15s;
+    --delay: .15s;
+    --radius: 16px;
+    transition: border-top-left-radius var(--dur) var(--delay) ease-out,
+    border-top-right-radius var(--dur) calc(var(--delay) * 2) ease-out,
+    border-bottom-right-radius var(--dur) calc(var(--delay) * 3) ease-out,
+    border-bottom-left-radius var(--dur) calc(var(--delay) * 4) ease-out,
+    box-shadow calc(var(--dur) * 4) ease-out,
+    transform calc(var(--dur) * 4) ease-out,
+    background calc(var(--dur) * 4) steps(4, jump-end);
+}

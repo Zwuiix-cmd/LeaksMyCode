@@ -1,0 +1,40 @@
+document.addEventListener('DOMContentLoaded', function () {
+    const mainForm = document.getElementById('mainForm');
+    const autoclickerCpsResult = document.querySelector('[name="autoclicker_cps_result"]');
+    const reachResult = document.querySelector('[name="reach_result"]');
+    const horizontalResult = document.querySelector('[name="horizontalResult"]');
+    const verticalResult = document.querySelector('[name="verticalResult"]');
+    const timerResult = document.querySelector('[name="timerResult"]');
+    const widthResult = document.querySelector('[name="widthResult"]');
+    const heightResult = document.querySelector('[name="heightResult"]');
+    const killauraReach = document.querySelector('[name="killaura_reach"]');
+    const killauraClicker = document.querySelector('[name="killaura_clicker"]');
+    const heightJump = document.querySelector('[name="highjump_jumpheight"]');
+    const flySpeed = document.querySelector('[name="fly_speed"]');
+    const motionSpeed = document.querySelector('[name="motion_speed"]');
+    const glideSpeed = document.querySelector('[name="glide_speed"]');
+    const speed = document.querySelector('[name="speed"]');
+    const bhopSpeed = document.querySelector('[name="bhop_speed"]');
+    const healthChecker = document.querySelector('[name="healthchecker"]');
+    const timeChanger = document.querySelector('[name="timechanger"]');
+
+    mainForm.addEventListener('input', function () {
+        autoclickerCpsResult.textContent = autoclicker_cps_value.value + ' cps';
+        reachResult.textContent = reach_value.value + ' blocks';
+        horizontalResult.textContent = kbhorizontal.value + '%';
+        verticalResult.textContent = kbvertical.value + '%';
+        timerResult.textContent = timer.value;
+        widthResult.textContent = hitboxwidth.value;
+        heightResult.textContent = hitboxheight.value;
+        killauraReach.textContent = killaura_reach_value.value + ' blocks';
+        killauraClicker.textContent = killaura_clicker_value.value + ' cps';
+        heightJump.textContent = highjump_jumpheight_value.value;
+        flySpeed.textContent = fly_speed_value.value;
+        motionSpeed.textContent = motion_speed_value.value;
+        glideSpeed.textContent = glide_speed_value.value;
+        speed.textContent = speed_value.value;
+        bhopSpeed.textContent = bhop_speed_value.value;
+        healthChecker.textContent = healthchecker_percent.value + ' %';
+        timeChanger.textContent = timechanger_value.value;
+    });
+});

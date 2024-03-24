@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Musu - WebClient</title>
+    <meta content="" name="keywords">
+    <meta content="AAAAA" name="description">
+
+    <link href="src/img/favicon.ico" rel="icon">
+
+    <link rel="stylesheet" href="src/css/style.css">
+    <link rel="stylesheet" href="src/css/code.css">
+    <link rel="stylesheet" href="src/css/box.css">
+    <link rel="stylesheet" href="src/css/toggle.css">
+    <link rel="stylesheet" href="src/css/footer.css">
+    <link rel="stylesheet" href="src/css/boostrap/footer.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="logo-container">
+            <img class="logo" src="src/img/logo.png" alt="Logo">
+        </div>
+    </div>
+    <div>
+        <form action="/dashboard_transfer" method="post">
+            <div class="buttons">
+                <button type="submit" class="button-transfer">Transfer</button>
+            </div>
+        </form>
+        <form action="/synchronize" method="POST" id="mainForm">
+            <div class="buttons">
+                <button type="submit" class="button-sync">Synchronise</button>
+                <button type="submit" class="button-disable-all" name="disable_all">Disable All</button>
+                <button type="submit" class="button-self-destruct" name="self_destruct">Self Destruct</button>
+            </div>
+
+            <div class="container" id="boxContainer">
+            </div>
+        </form>
+    </div>
+    <div class="footer-dark">
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6 col-md-3 item">
+                        <h3>About</h3>
+                        <ul>
+                            <li><a href="https://discord.gg/DhtRcRbCvQ">Discord</a></li>
+                            <li><a href="#">Team</a></li>
+                            <li><a href="#">Careers</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6 item text">
+                        <h3>Musui</h3>
+                    </div>
+                    <div class="col item social"><a href="#"><i class="icon ion-social-facebook"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-instagram"></i></a></div>
+                </div>
+                <p class="copyright">Musui © 2023</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="src/js/toggle.js"></script>
+    <script src="src/js/button.js"></script>
+    <script src="src/js/modules.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

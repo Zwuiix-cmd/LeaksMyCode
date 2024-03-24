@@ -1,0 +1,61 @@
+.toggle {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+}
+
+.toggle-switch {
+    display: inline-block;
+    background: #ccc;
+    border-radius: 12px;
+    width: 40px;
+    height: 24px;
+    position: absolute;
+
+    right: 0;
+    vertical-align: middle;
+    transition: background 0.25s;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.toggle-switch:before,
+.toggle-switch:after {
+    content: "";
+}
+
+.toggle-switch:before {
+    display: block;
+    background: linear-gradient(to bottom, #fff 0%, #eee 100%);
+    border-radius: 50%;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.25);
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    transition: left 0.25s;
+}
+
+.toggle:hover .toggle-switch:before {
+    background: linear-gradient(to bottom, #fff 0%, #fff 100%);
+    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.5);
+}
+
+.toggle-checkbox:checked + .toggle-switch {
+    background: #f9e86a;
+}
+
+.toggle-checkbox:checked + .toggle-switch:before {
+    left: 20px;
+}
+
+.toggle-checkbox {
+    position: absolute;
+    visibility: hidden;
+}
+
+.toggle-label {
+    position: relative;
+    top: 2px;
+}

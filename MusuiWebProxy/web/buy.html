@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="stylesheet" href="src/css/style.css">
+    <title>Musu - WebClient</title><link rel="stylesheet" href="src/css/code.css">
+    <meta content="" name="keywords"><link rel="stylesheet" href="src/css/box.css">
+    <meta content="AAAAA" name="description">
+    <link href="src/img/favicon.ico" rel="icon">
+    <link rel="stylesheet" href="src/css/boostrap/footer.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" type="text/css" href="src/css/paypal.css">
+</head>
+<body>
+    <div class="container">
+        <div class="product">
+        <h2>WebClient | 1 month</h2>
+        <p class="price">$30</p>
+        </div>
+        <div class="payment">
+            <h3>Payment with PayPal</h3>
+            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+            <input type="hidden" name="cmd" value="_s-xclick" />
+            <input type="hidden" name="hosted_button_id" value="3997H99HDDH3J" />
+            <input type="hidden" name="currency_code" value="EUR" />
+            <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_paynowCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Buy Now" />
+            <input type="hidden" name="notify_url" value="http://localhost:3000/ipn">
+            </form>
+        </div>
+    </div>
+</body>
+</html>
