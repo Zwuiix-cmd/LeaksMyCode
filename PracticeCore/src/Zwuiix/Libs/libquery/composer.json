@@ -1,0 +1,19 @@
+{
+    "name": "mmm545/libgamespyquery",
+    "description": "A virion and library to query servers using GS4",
+    "version": "2.0.0",
+    "authors": [
+        {
+            "name": "mmm545"
+        }
+    ],
+    "type": "library",
+    "require": {
+        "php": "^7.3 || ^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "mmm545\\libgamespyquery\\": "src/mmm545/libgamespyquery/"
+        }
+    }
+}

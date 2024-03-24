@@ -1,0 +1,8 @@
+knockback:
+  xz: 0.4
+  y: 0.4
+heightlimiter:
+  maxheightreduce: 1.17
+  maxdistance: 3
+  all: 0.026
+attackCooldown: 10

@@ -1,0 +1,6 @@
+name: PracticeCore
+version: 1.5
+api: 4.0.0
+main: Zwuiix\Main
+authors:
+  - Zwuiix
