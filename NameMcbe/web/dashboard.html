@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>NameMCBE</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="og:site_name" content="NameMCBE">
+    <link rel="stylesheet" type="text/css" href="src/css/dashboard.css">
+</head>
+<body>
+<header>
+    <h1>Name MCBE</h1>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Skins</a></li>
+            <li><a href="#">Players</a></li>
+            <li><a href="#">Profile</a></li>
+        </ul>
+    </nav>
+</header>
+<div>
+    <form action="/search/" method="post">
+        <section class="search-bar">
+            <input class="search-input" type="text" name="name" id="name" placeholder="Rechercher une personne...">
+            <button type="submit" class="search-button">Rechercher</button>
+        </section>
+    </form>
+</div>
+<main>
+    <section>
+        <h2>Skins</h2>
+        <p>Click Here</p>
+    </section>
+
+    <section>
+        <h2>Players</h2>
+        <p>Click Here</p>
+    </section>
+</main>
+
+<div class="skin-tab">
+    <h2>Skins Minecraft</h2>
+    <div id="minecraft-skin-3d"></div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+<script src="src/javascript/dashboard.js"></script>
+</body>
+
+<footer>
+    <p>Droits d'auteurs &copy; 2023 Name MCBE</p>
+</footer>
+</html>
