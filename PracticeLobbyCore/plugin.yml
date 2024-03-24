@@ -1,0 +1,42 @@
+name: PracticeCore
+main: Loader
+version: 1.0.0
+api: [4.0.0, 5.0.0, 6.0.4]
+authors:
+  - Zwuiix
+
+permissions:
+  practicecore.command.rank:
+    default: true
+  practicecore.command.setrank:
+    default: op
+  practicecore.command.knockback:
+    default: op
+  practicecore.command.setknockback:
+    default: op
+  practicecore.command.setheightlimiter:
+    default: op
+  practicecore.command.setattackcooldown:
+    default: op
+  practicecore.command.disguise:
+    default: op
+  practicecore.command.undisguise:
+    default: op
+  practicecore.command.record:
+    default: op
+  practicecore.command.replaymod:
+    default: op
+  practicecore.session.chat_restricted:
+    default: op
+  practicecore.command.spawn:
+    default: true
+  practicecore.command.rekit:
+    default: true
+  practicecore.command.ping:
+    default: true
+  practicecore.command.tell:
+    default: true
+  practicecore.command.reply:
+    default: true
+  practicecore.command.stats:
+    default: true
