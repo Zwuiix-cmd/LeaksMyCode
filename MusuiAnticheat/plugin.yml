@@ -1,0 +1,11 @@
+name: MusuiAntiCheat
+main: MusuiAntiCheat\Zwuiix\Main
+version: 2.0.0
+api: [4.0.0, 5.0.0, 6.0.3]
+author: Zwuiix
+
+permissions:
+  musuianticheat.anticheat.manage:
+    default: op
+  musuianticheat.anticheat.module:
+    default: op
