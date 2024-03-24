@@ -1,0 +1,7 @@
+{
+  "name": "PacketAnalyser",
+  "version": "1.0.0",
+  "dependencies": {
+    "bedrock-protocol": "^3.30.0"
+  }
+}
