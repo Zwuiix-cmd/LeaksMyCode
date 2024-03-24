@@ -1,0 +1,5 @@
+pack_chunk_size: 128
+resource_stack:
+  - path: AdvancedFreezeTEXT.zip
+  - path: AdvancedFreezeUI.zip
+    encryptKey: EzR4ZhSS88U9QU8kitYzhNwgpO5EqgxD

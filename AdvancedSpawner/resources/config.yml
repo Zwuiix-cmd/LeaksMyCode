@@ -1,0 +1,17 @@
+Zombie:
+  entityId: "minecraft:zombie"
+  block: "minecraft:stone"
+  spawnRadius: 3 # 3 blocks autour du "spawner"
+  spawnDistance: 25 # 25 blocks (un joueur doit être à minimum 25 blocks du spawner)
+  spawnSpeed: 120 # En ticks donc 20 = 1 secondes, 20 * 6 => 6 secondes
+  drops:
+    - "minecraft:diamond"
+    - "minecraft:emerald"
+Agent:
+  entityId: "minecraft:cow"
+  block: "minecraft:grass"
+  spawnRadius: 3 # 3 blocks autour du "spawner"
+  spawnDistance: 25 # 25 blocks (un joueur doit être à minimum 25 blocks du spawner)
+  spawnSpeed: 120 # En ticks donc 20 = 1 secondes, 20 * 6 => 6 secondes
+  drops:
+    - "minecraft:bedrock"

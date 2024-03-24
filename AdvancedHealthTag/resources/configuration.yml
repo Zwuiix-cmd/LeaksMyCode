@@ -1,0 +1,11 @@
+#Type available: "percentage", "health".
+type: "percentage"
+#Visual available: "scoretag", "actionbar"
+visual: "scoretag"
+colors:
+  - "{&VALUE} > 90": §a
+  - "{&VALUE} > 60": §2
+  - "{&VALUE} > 50": §e
+  - "{&VALUE} > 40": §6
+  - "{&VALUE} > 35": §c
+  - "default": §4

@@ -1,0 +1,13 @@
+permissions: []
+default: 1
+
+menu:
+  type: "invmenu:dropper"
+  name: "PrivateChest #{&COUNT}"
+
+messages:
+  incorrect-args: "Sorry, you have entered a number less than or greater than the maximum possible."
+  error-permission: "Sorry, you don't have permission to open your private safe #{&COUNT}"
+
+task:
+  period: 1200

@@ -1,0 +1,55 @@
+{
+  "globalpause_screen@common.base_screen": {
+    "$screen_content": "globalpause.pause_screen_content"
+  },
+  "message": {
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "color": "$body_text_color",
+    "layer": 2,
+    "offset": [
+      0,
+      "-10%"
+    ],
+    "shadow": false,
+    "text": "§cVérification en cours, veuilllez patientez",
+    "type": "label"
+  },
+  "namespace": "globalpause",
+  "pause_screen_content": {
+    "$fill_alpha|default": 0.8,
+    "controls": [
+      {
+        "transparentFill": {
+          "alpha": "$fill_alpha",
+          "layer": -1,
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "texture": "textures/ui/control",
+          "type": "image"
+        }
+      },
+      {
+        "message@globalpause.message": {}
+      }
+    ],
+    "type": "panel",
+    "variables": [
+      {
+        "$fill_alpha": 1.0,
+        "requires": "$is_holographic"
+      }
+    ]
+  },
+  "quit_button@common_buttons.light_text_form_fitting_button": {
+    "$button_text": "globalPauseScreen.quit",
+    "$pressed_button_name": "button.menu_quit",
+    "layer": 2,
+    "offset": [
+      0,
+      "10%"
+    ]
+  }
+}

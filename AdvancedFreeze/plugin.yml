@@ -1,0 +1,11 @@
+name: AdvancedFreeze
+author: Zwuiix
+api: 4.0.0
+version: 1.0.0
+main: Zwuiix\AdvancedFreeze\Main
+description: Made by Zwuiix
+
+permissions:
+  advancedfreeze.commands.freeze:
+    default: op
+    description: Freeze Permission Command

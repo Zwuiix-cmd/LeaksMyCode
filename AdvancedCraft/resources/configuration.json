@@ -1,0 +1,20 @@
+{
+  "delete": [
+    "minecraft:diamond"
+  ],
+  "new": [
+    {
+      "input": {
+        "A": "minecraft:stone"
+      },
+      "shape": [
+        "A",
+        "A"
+      ],
+      "output": {
+        "id": "minecraft:diamond",
+        "count": 1
+      }
+    }
+  ]
+}

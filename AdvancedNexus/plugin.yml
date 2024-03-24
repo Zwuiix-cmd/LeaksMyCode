@@ -1,0 +1,11 @@
+name: AdvancedNexus
+author: Zwuiix
+api: 4.0.0
+version: 1.0.0
+main: Zwuiix\AdvancedNexus\Main
+description: Made by Zwuiix
+
+permissions:
+  advancednexus.command:
+    default: op
+    description: Nexus Permission Command

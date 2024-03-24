@@ -1,0 +1,9 @@
+name: MusuiScanner
+main: MusuiScanner
+version: 1.0.0
+api: [5.0.0]
+author: Zwuiix
+
+permissions:
+  musuiscanner.command:
+    default: op

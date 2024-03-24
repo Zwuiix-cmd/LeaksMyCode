@@ -1,0 +1,13 @@
+chance:
+  min: 1
+  max: 100
+
+items:
+  - 0:
+      id: 1
+      meta: 0
+      chance: 50
+  - 1:
+      id: 2
+      meta: 0
+      chance: 25

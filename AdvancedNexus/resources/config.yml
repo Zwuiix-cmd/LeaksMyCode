@@ -1,0 +1,35 @@
+entity:
+  max-health: 100
+  scale: 2.6
+  position:
+    x: 0
+    y: 60
+    z: 0
+    world: "world"
+
+message:
+  entity-info: "§d- §cVous devez encore faire (§5{POINT}§c/§5{MAX}§c)! §d-"
+  broadcast-announce: "§d[§5V§d] §aUn évent §eNexus§a a été lancer!"
+  broadcast-stop: "§d[§5V§d] §cL'évènement §dNexus§c vien d'être stopper!"
+  broadcast-winner: "§d[§5V§d] §d{PLAYER}§f de la faction §e{FACTION}§f vient de gagner l'évent §dNexus §f!"
+  winner-info: "§fWinners: §d{PLAYER}§f avec §d{MAX} hit"
+  win: "§d[§5V§d] §aBien joué, vous venez de remporter l'évènement §dNexus§a, un grand bravo à vous!"
+
+win:
+  power:
+    activate: false
+    count: 20
+  money:
+    activate: false
+    count: 1
+  items:
+    activate: true
+    items:
+      - 0:
+          id: 1
+          meta: 0
+          count: 1
+      - 1:
+          id: 2
+          meta: 0
+          count: 2

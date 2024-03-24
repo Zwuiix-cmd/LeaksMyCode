@@ -1,0 +1,11 @@
+messages:
+  frozen: "§aVous avez été freeze!"
+  player-frozen: "§cDésolée, vous ne pouvez pas attaquer ce joueur!"
+  target-not-found: "§cDésolée, ce joueur n'est pas connectées!"
+  target-frozen: "§a{PLAYER} a été freeze avec succès, il est désormais en {TYPE}!"
+
+commands:
+  freeze:
+    name: "freeze"
+    description: "Cette commande permet de freeze ou d'unfreeze un joueur!"
+    aliases: ["frozen"]

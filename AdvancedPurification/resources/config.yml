@@ -1,0 +1,22 @@
+item:
+  id: 1
+  meta: 0
+  count: 1
+
+zone:
+  time: 8
+
+  min-money: 2
+  max-money: 8
+
+  # Permissions: advancedpurification.boost
+  boost: 2
+
+  #           X    Y     Z    X    Y      Z   MONDE
+  position: "125, 110, -231, 129, 1120, -235, world"
+
+message:
+  icon: "⬛"
+  exit-zone: "§d- §cVous êtes sortie de la zone de purification §d-"
+  success-tip: "§d- §aBien joué, vous avez réaliser une purification avec succès! §d-"
+  success-chat: "§d[§5V§d] §aEn réalisant la purification, vous avez obtenue §d{ARGENT}§a d'argent!"
